@@ -1,0 +1,82 @@
+@mixin border-radius($radius...){
+    -moz-border-radius:$radius ;
+    -webkit-border-radius:$radius;
+    -o-border-radius:$radius;
+    -ms-border-radius:$radius;
+    border-radius:$radius;
+}
+@mixin transition($transition-time ...){
+    -moz-transition:  $transition-time;
+    -webkit-transition: $transition-time;
+    -ms-transition:  $transition-time;
+    -o-transition: $transition-time;
+    transition: $transition-time; 
+}
+@mixin border($border-color, $border-width, $border-style){
+    -webkit-border-color:$border-color;
+    -moz-border-color:$border-color;
+    -o-border-color:$border-color;
+    -ms-border-color:$border-color;
+    border-color:$border-color;
+
+    -webkit-border-width:$border-width;
+    -moz-border-width:$border-width;
+    -o-border-width:$border-width;
+    -ms-border-width:$border-width;
+    border-width:$border-width;
+
+    -webkit-border-style:$border-style;
+    -moz-border-style:$border-style;
+    -o-border-style:$border-style;
+    -ms-border-style:$border-style;
+    border-style:$border-style;
+}
+@mixin outline($outline-color, $outline-width, $outline-style){
+    -webkit-outline-color:$outline-color;
+    -moz-outline-color:$outline-color;
+    -o-outline-color:$outline-color;
+    -ms-outline-color:$outline-color;
+    outline-color:$outline-color;
+
+    -webkit-outline-width:$outline-width;
+    -moz-outline-width:$outline-width;
+    -o-outline-width:$outline-width;
+    -ms-outline-width:$outline-width;
+    outline-width:$outline-width;
+
+    -webkit-outline-style:$outline-style;
+    -moz-outline-style:$outline-style;
+    -o-outline-style:$outline-style;
+    -ms-outline-style:$outline-style;
+    outline-style:$outline-style;
+}
+@mixin box-shadow($box-shadow-details...){
+    -webkit-box-shadow:$box-shadow-details;
+    -o-box-shadow:$box-shadow-details;
+    -ms-box-shadow:$box-shadow-details;
+    -moz-box-shadow:$box-shadow-details;
+    box-shadow:$box-shadow-details;
+
+}
+@mixin text-shadow($text-shadow-details...){
+    -webkit-text-shadow:$text-shadow-details;
+    -o-text-shadow:$text-shadow-details;
+    -ms-text-shadow:$text-shadow-details;
+    -moz-text-shadow:$text-shadow-details;
+    text-shadow:$text-shadow-details;
+
+}
+@mixin filter($grayscale...) {
+    -webkit-filter:$grayscale;
+    -ms-filter:$grayscale;
+    -moz-filter:$grayscale;
+    -o-filter:$grayscale;
+    filter:$grayscale;
+}
+@mixin linear-gradient($gradient-details...){
+    background: -moz-linear-gradient($gradient-details);
+      background: -webkit-linear-gradient($gradient-details);
+      background: -o-linear-gradient($gradient-details);
+      background: -ms-linear-gradient($gradient-details);
+      background: linear-gradient($gradient-details);
+}
