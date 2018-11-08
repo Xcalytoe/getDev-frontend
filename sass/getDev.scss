@@ -178,25 +178,30 @@ body {
   }
 }
 .feature-header{
+  height: 100%;
+  position: relative;
   padding-top:50px;
     background:$getDev-red1;
-    @include linear-gradient(to left, #19558a 10%, #31abf8 100%);
-    @include linear-gradient(to left,  #1b22a2 10%, #3b92df 100%);
-    @include linear-gradient(to left,  #1b22a2 10%, #00356B 100%);
-    @include linear-gradient(to left,  #00356B 10%, #3288d4 100%);
-    background: linear-gradient(to left, #5a2bba 10%, #1ca4f6 100%);
-    background: linear-gradient(to left,$getDev-gradient1 10%, $getDev-gradient2 100%);
+    // @include linear-gradient(to left, #19558a 10%, #31abf8 100%);
+    // @include linear-gradient(to left,  #1b22a2 10%, #3b92df 100%);
+    // @include linear-gradient(to left,  #1b22a2 10%, #00356B 100%);
+    // @include linear-gradient(to left,  #00356B 10%, #3288d4 100%);
+    // background: linear-gradient(to left, #5a2bba 10%, #1ca4f6 100%);
+    // background: linear-gradient(to left,$getDev-gradient1 10%, $getDev-gradient2 100%);
+    background-image: linear-gradient(to right, #0575e6, #0b5eca, #0b47af, #083194, #021b79);
     background-size: cover;
-    overflow: hidden;
+    // overflow: hidden;
     .hero-head{
         color:$getDev-light;
-        padding:150px 0 20px;
+        padding:200px 0 0 0;
         h4{
-            font-size: 32px;
+          padding-top:60px;
+          font-size: 40px;
+          font-size: 3rem;
         }
         p{
-            padding-top:8px;
-            font-size:18px;
+            padding-top:15px;
+            font-size:28px;
         }
     }
     .hero-link{
@@ -204,23 +209,46 @@ body {
         padding-bottom: 100px;
         .get-assessed{
             color:darken($getDev-compliment,5%);
-            color:darken($getDev-light,5%);
-            padding:8px 20px;
+            // color:darken($getDev-light,5%);
+            padding:10px 30px;
             font-size: 18px;
             font-weight: 400;
             @include text-shadow(0px 2px rgba(0,0,0,0.1));
             background: darken($getDev-compliment,1%);
-            // background: darken($getDev-light,10%);
+            background: $link-bg;
             @include transition (all .45s);
-            @include border-radius(5px);
+            @include border-radius(30px);
             @include box-shadow(-3px -3px 14px -1px rgba(0, 0, 0, .08), 3px 3px 14px 1px rgba(0, 0, 0, .18), 2px 4px 18px 3px rgba(0, 0, 0, .019));
         &:hover{
             color:darken($getDev-light,8%);
+            color:darken($getDev-compliment,8%);
             // @include text-shadow(0px 2px rgba(0,0,0,0.1));
             background: darken($getDev-compliment,10%);
+            background: $getDev-light;
             @include transition (all .45s);
             text-decoration: none;
         }
+        }
+        div{
+          margin-top:25px;
+          svg{
+            height: 150px;
+            width: 100px;
+            -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            -webkit-animation-name: bounce; 
+            animation-name: bounce; 
+            -webkit-transform-origin: center bottom; 
+            transform-origin: center bottom; 
+          path{
+            fill:darken(#fefefe,30%);
+            // stroke:darken(getDev-text2,10%);
+          }
+          }
         }
     }
 } 
