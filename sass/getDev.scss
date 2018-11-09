@@ -332,6 +332,7 @@ body {
  /*hire a dev ends*/
  /*partners*/
  .partners{
+   background: $getDev-light;
    padding-top:80px;
    padding-bottom:50px;
    .row{
@@ -360,6 +361,16 @@ body {
    }
  }
  /*partners ends*/
+ /*how it works*/
+ .how-it-works-container{
+  padding-bottom: 5em;
+  padding-top: 5em;
+  background: $getDev-light1;
+  .timeline-content{
+    @include box-shadow(-3px -3px 14px -1px rgba(0, 0, 0, .02), 3px 3px 14px 1px rgba(0, 0, 0, .02), 2px 4px 18px 3px rgba(0, 0, 0, .014));
+  }
+ }
+ /*how it works ends*/
  /*footer */
  .footer-bg{
    position: relative;

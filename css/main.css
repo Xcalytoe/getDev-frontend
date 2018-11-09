@@ -308,6 +308,7 @@ nav {
 /*hire a dev ends*/
 /*partners*/
 .partners {
+  background: #FEFEFE;
   padding-top: 80px;
   padding-bottom: 50px; }
   .partners .row div {
@@ -346,6 +347,19 @@ nav {
     box-shadow: -3px -3px 14px -1px rgba(0, 0, 0, 0.02), 3px 3px 14px 1px rgba(0, 0, 0, 0.02), 2px 4px 18px 3px rgba(0, 0, 0, 0.014); }
 
 /*partners ends*/
+/*how it works*/
+.how-it-works-container {
+  padding-bottom: 5em;
+  padding-top: 5em;
+  background: #fafafa; }
+  .how-it-works-container .timeline-content {
+    -webkit-box-shadow: -3px -3px 14px -1px rgba(0, 0, 0, 0.02), 3px 3px 14px 1px rgba(0, 0, 0, 0.02), 2px 4px 18px 3px rgba(0, 0, 0, 0.014);
+    -o-box-shadow: -3px -3px 14px -1px rgba(0, 0, 0, 0.02), 3px 3px 14px 1px rgba(0, 0, 0, 0.02), 2px 4px 18px 3px rgba(0, 0, 0, 0.014);
+    -ms-box-shadow: -3px -3px 14px -1px rgba(0, 0, 0, 0.02), 3px 3px 14px 1px rgba(0, 0, 0, 0.02), 2px 4px 18px 3px rgba(0, 0, 0, 0.014);
+    -moz-box-shadow: -3px -3px 14px -1px rgba(0, 0, 0, 0.02), 3px 3px 14px 1px rgba(0, 0, 0, 0.02), 2px 4px 18px 3px rgba(0, 0, 0, 0.014);
+    box-shadow: -3px -3px 14px -1px rgba(0, 0, 0, 0.02), 3px 3px 14px 1px rgba(0, 0, 0, 0.02), 2px 4px 18px 3px rgba(0, 0, 0, 0.014); }
+
+/*how it works ends*/
 /*footer */
 .footer-bg {
   position: relative;
