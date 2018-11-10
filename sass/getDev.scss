@@ -327,6 +327,8 @@ body {
   h4{
     color:$getDev-text1;
     padding-top:30px;
+    color:$getDev-gradient-text2;
+    font-size: 2rem;
   }
 }
  /*hire a dev ends*/
@@ -341,7 +343,8 @@ body {
      }
    }
    h4{
-    color:$getDev-text1;
+    color:$getDev-gradient-text2;
+    font-size: 2rem;
    }
    a{
      .company{
@@ -366,8 +369,18 @@ body {
   padding-bottom: 5em;
   padding-top: 5em;
   background: $getDev-light1;
+  background-image: linear-gradient(to bottom, #1b66e7, #0b47af, #0b5eca, #0575e6);
+  background-size: cover;
+  // background:#0b5eca;
+
   .timeline-content{
     @include box-shadow(-3px -3px 14px -1px rgba(0, 0, 0, .02), 3px 3px 14px 1px rgba(0, 0, 0, .02), 2px 4px 18px 3px rgba(0, 0, 0, .014));
+  }
+  .process-title{
+    font-size: 2rem;
+    color: $getDev-gradient-text2;
+    color: $white;
+    // font-weight: 600;
   }
  }
  /*how it works ends*/

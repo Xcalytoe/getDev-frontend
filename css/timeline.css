@@ -73,14 +73,16 @@
 }
 
 .main-timeline2 .title {
-    font-size: 24px;
+    font-size: 22px;
     margin: 0
 }
 
 .main-timeline2 .description {
-    font-size: 15px;
+    font-size: 16px;
     letter-spacing: 1px;
-    margin: 0 0 5px
+    margin: 0 0 5px;
+    padding-left:15px;
+    padding-right:15px;
 }
 
 .main-timeline2 .timeline:nth-child(2n) {

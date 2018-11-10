@@ -303,7 +303,9 @@ nav {
           background: #990000; }
   .mission h4 {
     color: #444444;
-    padding-top: 30px; }
+    padding-top: 30px;
+    color: #030977;
+    font-size: 2rem; }
 
 /*hire a dev ends*/
 /*partners*/
@@ -314,7 +316,8 @@ nav {
   .partners .row div {
     margin-bottom: 30px; }
   .partners h4 {
-    color: #444444; }
+    color: #030977;
+    font-size: 2rem; }
   .partners a .company {
     width: 151px;
     height: 50px;
@@ -351,13 +354,19 @@ nav {
 .how-it-works-container {
   padding-bottom: 5em;
   padding-top: 5em;
-  background: #fafafa; }
+  background: #fafafa;
+  background-image: linear-gradient(to bottom, #1b66e7, #0b47af, #0b5eca, #0575e6);
+  background-size: cover; }
   .how-it-works-container .timeline-content {
     -webkit-box-shadow: -3px -3px 14px -1px rgba(0, 0, 0, 0.02), 3px 3px 14px 1px rgba(0, 0, 0, 0.02), 2px 4px 18px 3px rgba(0, 0, 0, 0.014);
     -o-box-shadow: -3px -3px 14px -1px rgba(0, 0, 0, 0.02), 3px 3px 14px 1px rgba(0, 0, 0, 0.02), 2px 4px 18px 3px rgba(0, 0, 0, 0.014);
     -ms-box-shadow: -3px -3px 14px -1px rgba(0, 0, 0, 0.02), 3px 3px 14px 1px rgba(0, 0, 0, 0.02), 2px 4px 18px 3px rgba(0, 0, 0, 0.014);
     -moz-box-shadow: -3px -3px 14px -1px rgba(0, 0, 0, 0.02), 3px 3px 14px 1px rgba(0, 0, 0, 0.02), 2px 4px 18px 3px rgba(0, 0, 0, 0.014);
     box-shadow: -3px -3px 14px -1px rgba(0, 0, 0, 0.02), 3px 3px 14px 1px rgba(0, 0, 0, 0.02), 2px 4px 18px 3px rgba(0, 0, 0, 0.014); }
+  .how-it-works-container .process-title {
+    font-size: 2rem;
+    color: #030977;
+    color: #ffffff; }
 
 /*how it works ends*/
 /*footer */
