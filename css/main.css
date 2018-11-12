@@ -363,12 +363,87 @@ nav {
 /*how it works ends*/
 /*blog*/
 .blog {
-  padding-top: 5em;
-  padding-bottom: 5em;
-  background: #fafafa; }
+  padding: 5em;
+  background: #fafafa;
+  position: relative;
+  overflow: hidden !important; }
+  .blog:before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 640px;
+    background: rgba(236, 241, 245, 0.8);
+    -webkit-transform-origin: 0;
+    transform-origin: 0;
+    -webkit-transform: skewY(-12deg);
+    transform: skewY(-12deg); }
   .blog h4 {
     color: #030977;
     font-size: 2rem; }
+  .blog .blog-container {
+    padding-right: 1.5em;
+    padding-left: 1.5em; }
+    .blog .blog-container .blog-body {
+      margin-top: 2em;
+      padding-top: 2em;
+      padding-bottom: 2em;
+      background: #FEFEFE;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      -webkit-border-color: white;
+      -moz-border-color: white;
+      -o-border-color: white;
+      -ms-border-color: white;
+      border-color: white;
+      -webkit-border-width: 1px;
+      -moz-border-width: 1px;
+      -o-border-width: 1px;
+      -ms-border-width: 1px;
+      border-width: 1px;
+      -webkit-border-style: solid;
+      -moz-border-style: solid;
+      -o-border-style: solid;
+      -ms-border-style: solid;
+      border-style: solid;
+      -webkit-box-shadow: -3px -3px 14px -1px rgba(0, 0, 0, 0.01), 3px 3px 14px 1px rgba(0, 0, 0, 0.01), 2px 4px 18px 1.5px rgba(0, 0, 0, 0.014);
+      -o-box-shadow: -3px -3px 14px -1px rgba(0, 0, 0, 0.01), 3px 3px 14px 1px rgba(0, 0, 0, 0.01), 2px 4px 18px 1.5px rgba(0, 0, 0, 0.014);
+      -ms-box-shadow: -3px -3px 14px -1px rgba(0, 0, 0, 0.01), 3px 3px 14px 1px rgba(0, 0, 0, 0.01), 2px 4px 18px 1.5px rgba(0, 0, 0, 0.014);
+      -moz-box-shadow: -3px -3px 14px -1px rgba(0, 0, 0, 0.01), 3px 3px 14px 1px rgba(0, 0, 0, 0.01), 2px 4px 18px 1.5px rgba(0, 0, 0, 0.014);
+      box-shadow: -3px -3px 14px -1px rgba(0, 0, 0, 0.01), 3px 3px 14px 1px rgba(0, 0, 0, 0.01), 2px 4px 18px 1.5px rgba(0, 0, 0, 0.014); }
+      .blog .blog-container .blog-body h6 {
+        padding-left: 15px;
+        padding-right: 15px;
+        color: #1d2b4c;
+        font-size: 1.15rem;
+        margin-bottom: 0; }
+      .blog .blog-container .blog-body .sub-title {
+        padding-left: 15px;
+        padding-right: 15px;
+        font-size: .95rem;
+        color: #444444;
+        font-weight: 200;
+        padding-bottom: .5em; }
+      .blog .blog-container .blog-body .details-container p {
+        text-align: left !important;
+        padding: 20px 15px 0 15px;
+        color: #201D1D; }
+      .blog .blog-container .blog-body .details-container a {
+        color: #030977;
+        text-decoration: underline;
+        -moz-transition: all 0.35s;
+        -webkit-transition: all 0.35s;
+        -ms-transition: all 0.35s;
+        -o-transition: all 0.35s;
+        transition: all 0.35s; }
+        .blog .blog-container .blog-body .details-container a:hover {
+          -moz-transition: all 0.35s;
+          -webkit-transition: all 0.35s;
+          -ms-transition: all 0.35s;
+          -o-transition: all 0.35s;
+          transition: all 0.35s;
+          text-decoration: none; }
 
 /*blog ends*/
 /*footer */
@@ -484,6 +559,24 @@ nav {
         border-style: solid; }
 
 /*footer ends*/
+@media (min-width: 2200px) {
+  .blog-body img {
+    height: 200px !important; } }
+.blog-body img {
+  width: 100%;
+  object-fit: cover;
+  height: 160px; }
+
+@media (max-width: 1200px) {
+  .blog {
+    padding-left: 0em !important;
+    padding-right: 0em !important; }
+
+  .blog-body img {
+    height: 130px !important; } }
+@media (min-width: 768px) and (max-width: 991px) {
+  .blog-body img {
+    height: 110px !important; } }
 @media (min-width: 576px) and (max-width: 767px) {
   .card-content {
     padding: 3em 2em 4em !important; } }
