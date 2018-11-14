@@ -155,7 +155,7 @@ body {
       display: none;
     }
   }
-@media (max-width:991px){
+@media (max-width:767px){
   .header{
     li{
       &:first-of-type{
@@ -222,6 +222,7 @@ body {
             background: darken($getDev-compliment,1%);
             background: $link-bg;
             @include transition (all .45s);
+            @include border-radius(3px);
             @include box-shadow(-3px -3px 14px -1px rgba(0, 0, 0, .08), 3px 3px 14px 1px rgba(0, 0, 0, .18), 2px 4px 18px 3px rgba(0, 0, 0, .019));
         &:hover{
             color:darken($getDev-light,8%);
@@ -247,8 +248,11 @@ body {
             background-position: 50% 50%;
             background-size: contain;
             background-repeat: no-repeat;
-            -webkit-transition-duration: 600ms;
-            transition-duration: 600ms;
+           @include transition(all .6s);
+            &:hover{
+            @include transition(all .6s);
+            top: 9.5vh;
+            }
           }
         }
     }
@@ -289,18 +293,21 @@ body {
   .mission-header{
     padding:0em 30px 3em;
     padding-bottom: 35px;
-    p{color:$getDev-text1;}
+    p{
+      font-size: 17px;
+      color:$getDev-text1;
+    }
   }
   .card-content{
     background: $getDev-light;
-    padding: 3em 6em 4em;
+    padding: 3em 6em 4.5em;
     height: 100%;
     position: relative;
     @include border-radius(0px);
     @include box-shadow(-3px -3px 14px -1px rgba(0, 0, 0, .03), 3px 3px 14px 1px rgba(0, 0, 0, .03), 2px 4px 18px 3px rgba(0, 0, 0, .014));
   p{
     color:$getDev-text2;
-    font-size: 16.5px;
+    font-size: 17px;
     padding-bottom:10px;
     span{
       color:darken($getDev-compliment,20%);
@@ -308,15 +315,16 @@ body {
   }
   .get-started-container{
     position: absolute;
-    bottom: 35px;
+    bottom: 40px;
     width:100%;
     left:0;
+    font-size: 16px;
     .get-started{
-      padding:6px 18px;
+      padding:8px 20px;
       color:$white;
       background:$getDev-red4;
       @include transition (all .45s);
-      // @include border-radius(5px);
+      @include border-radius(3px);
      text-align: center;
      &:hover{
       @include transition (all .45s);
@@ -329,9 +337,9 @@ body {
   }
   h4{
     color:$getDev-text1;
-    padding-top:30px;
+    padding-bottom:10px;
     color:$getDev-gradient-text2;
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 }
  /*hire a dev ends*/
