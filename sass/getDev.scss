@@ -7,7 +7,10 @@ body {
     font-family: "Circular",sans-serif;
     font-weight: normal;
   }
-  
+  html {
+    scroll-behavior: smooth;
+    @include transition(all .6s);
+  }
   a {
     color: $getDev-dark2;
     &:hover{text-decoration: none;}
@@ -342,6 +345,7 @@ body {
     font-size: 2.2rem;
   }
 }
+
  /*hire a dev ends*/
  /*partners*/
  .partners{
