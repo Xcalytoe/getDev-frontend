@@ -26,7 +26,7 @@ body {
       z-index: 100;
   }
   .header {
-    // position: relative;
+    position: relative;
     margin: 0 auto;
     max-width: 1100px;
     padding: 0 20px;
@@ -39,7 +39,7 @@ body {
     margin: 0;
     padding: 0;
     list-style: none;
-    overflow: hidden;
+    // overflow: hidden;
   }
   
   .header li a {
@@ -143,21 +143,65 @@ body {
   /* 48em = 768px */
   
   @media (min-width: 48em) {
-    .header li {
-      float: left;
-    }
-    .header li a {
-      padding: 20px 20px;
-    }
-    .header .menu {
+    .header{
+     
+    .menu {
       clear: none;
       float: right;
       max-height: none;
     }
-    .header .menu-icon {
+    .menu-icon {
       display: none;
     }
+    ul{
+      li {
+        float: left;
+        a {
+          padding: 30px  20px 10px;
+        }
+      }
+      .dropdown {
+        .dropdown-menu {
+          border: none;
+          @include box-shadow(-3px -3px 14px -1px rgba(0, 0, 0, .02), 3px 3px 14px 1px rgba(0, 0, 0, .02), 2px 4px 18px 3px rgba(0, 0, 0, .015));
+          transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+            .dropdown-item {
+                padding-top: .4em;
+                padding-bottom: .1em;
+                color: $getDev-text1;
+            }
+            .dropdown-item.active {
+                background-color: transparent;
+                color:$getDev-compliment;
+                position: relative;
+            }
+        }
+    }
+    }
+
+    .dropdown .dropdown-menu {
+      @include transition ( all 0.25s, transform 0.3s);
+      max-height: 200px;
+      display: block;
+      visibility: hidden;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(-.9em);
   }
+  .dropdown:hover>.dropdown-menu {
+      visibility: visible;
+      max-height: 200px;
+      opacity: 1;
+      margin-top: 10px;
+      transform: translateY(0);
+      @include transition ( all 0.25s, transform 0.3s);
+  }
+  .dropdown>.dropdown-toggle:active {
+      /*Without this, clicking will make it sticky*/
+      pointer-events: none;
+  }
+  }
+}
 @media (max-width:767px){
   .header{
     li{
@@ -179,7 +223,58 @@ body {
     @include border-radius(5px);
     float: right !important;
   }
+  .menu {
+    ul {
+        & li {
+          .dropdown-toggle{
+              &.active{
+                // color:$farmgate-orange !important;
+            }
+          }
+            a {
+                color: white;
+                font-size: 1.05em;
+            }
+            .nav-link {
+                padding-left: 9vw !important;
+                padding-top: 20px !important
+            }
+        }
+        & .dropdown-menu {
+            background: transparent !important;
+            position: relative !important;
+            width: 100% !important;
+            padding-top:0;
+            margin-top:0;
+            & a:hover {
+                background: none !important;
+            }
+            & a {
+                font-size: .92em !important;
+                position: relative;
+                left: 10%;
+                padding: .2rem 1.5rem;
+                color: rgb(219, 208, 208);
+            }
+            .dropdown-item{
+              padding-top:0 !important;
+              padding-bottom:0 !important;
+              margin-top:0 !important;
+              margin-bottom:0 !important;
+            }
+              .dropdown-item.active {
+                background-color: transparent;
+                // color: $farmgate-main-color;
+                position: relative;
+                &:hover {
+                    // background-color: $farmgate-ligh-color-2;
+                } 
+            }
+        }
+    }
+  }
 }
+
 .feature-header{
     background:$getDev-red1;
     background-image: linear-gradient(to right, #0575e6, #0b5eca, #0b47af, #083194, #021b79);
