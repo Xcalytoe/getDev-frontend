@@ -253,6 +253,13 @@ body {
   }
 }
 @media (max-width:767px){
+  .feature-header{
+    .header-container{
+      .hero-head {
+        // padding:0 !important;
+    }
+  }
+}
   .header{
     li{
       &:first-of-type{
@@ -273,38 +280,21 @@ body {
     @include border-radius(5px);
     float: right !important;
   }
+  .header{
+    .menu-btn:checked ~ .menu {
+      max-height: 100% !important;
+  }
+  }
   .menu {
-    ul {
-        & li {
-          .dropdown-toggle{
-              &.active{
-                // color:$farmgate-orange !important;
-            }
-          }
-            a {
-                color: white;
-                font-size: 1.05em;
-            }
-            .nav-link {
-                padding-left: 9vw !important;
-                padding-top: 20px !important
-            }
-        }
         & .dropdown-menu {
+            transform: translate3d(0px, 0px, 0px) !important;
             background: transparent !important;
-            position: relative !important;
             width: 100% !important;
+            position: relative !important;
             padding-top:0;
             margin-top:0;
             & a:hover {
                 background: none !important;
-            }
-            & a {
-                font-size: .92em !important;
-                position: relative;
-                left: 10%;
-                padding: .2rem 1.5rem;
-                color: rgb(219, 208, 208);
             }
             .dropdown-item{
               padding-top:0 !important;
@@ -314,13 +304,47 @@ body {
             }
               .dropdown-item.active {
                 background-color: transparent;
-                // color: $farmgate-main-color;
                 position: relative;
-                &:hover {
-                    // background-color: $farmgate-ligh-color-2;
-                } 
             }
         }
+  }
+  .header{
+    .dropdown .dropdown-menu {
+      @include transition ( all 0.25s, transform 0.3s);
+      max-height: 400px;
+      visibility: visible;
+      display: block;
+      border:none;
+      opacity: 1;
+      @include transition ( all 0.25s, transform 0.3s);
+      max-height: 400px;
+      visibility: visible;
+      display: block;
+      opacity: 1;
+    //   // transform: translateY(0);
+    .dropdown-item{
+      padding-top:10px !important;
+      font-weight: 300;
+      &:first-of-type{
+      padding-top:0px !important;
+      }
+    }
+      .content{
+        li{
+          &:first-of-type{
+            padding-top:5px !important;
+          }
+          &:last-of-type{
+            padding-bottom:0px !important;
+            }
+          a{
+            padding-top:8px !important;
+            padding-bottom:8px !important;
+            font-style: italic !important;
+            font-weight: 500;
+          }
+        }
+      }
     }
   }
 }
@@ -358,7 +382,7 @@ body {
     }
     
     .hero-link{
-        z-index: 100 !important;
+        z-index: 99 !important;
         padding-top: 30px;
         .get-assessed{
             // color:darken($getDev-compliment,5%);
@@ -579,17 +603,33 @@ body {
          font-size: 1.15rem;
          margin-bottom: 0;
        }
+       .blog-search-link{
+        margin-top:1.5em;
+        padding-left:15px;
+        padding-right:15px;
+        color:$getDev-gradient-text1;
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-bottom: 0;
+        @include transition(all 0.45s);
+        text-decoration: underline !important;
+        &:hover{
+          @include transition(all 0.45s);
+          text-decoration: none !important;            
+        }
+      }
        .sub-title{
           padding-left:15px;
           padding-right:15px;
           font-size: .95rem;
           color:$getDev-text1;
           font-weight: 200;
-          padding-bottom:.5em;
-
+          margin-bottom: 0 !important;
+          padding-bottom:.3em;
+          padding-top: 1em !important;
        }
         margin-top:2em;
-        padding-top:2em;
+        padding-top:0;
         padding-bottom:2em;
         background:$getDev-light;
         padding-left: 0 !important;
@@ -599,7 +639,8 @@ body {
         .details-container{
           p{
             text-align: left !important;
-            padding:20px 15px 0 15px;
+            // padding:20px 15px 0 15px;
+            padding:10px 15px 0 15px;
             color: $getDev-dark2;
           }
           a{
