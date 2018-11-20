@@ -15,7 +15,56 @@ body {
     color: $getDev-dark2;
     &:hover{text-decoration: none;}
   }
+  /*collapsible*/
+  .collapsible {
+    padding: 18px;
+    width: 100%;
+    &:after {
+      content: '\002B';
+      color: $getDev-text1;
+      font-weight: bold;
+      float: right;
+      margin-left: 5px;
+    }
+    
+    &.active:after {
+      content: "\2212";
+      color:$getDev-compliment;
+    }
+    &.active{
+      background:$getDev-gradient3 !important;
+    }
+  }
   
+  // .active, .collapsible:hover {
+  //   background-color: #555;
+  // }
+  
+  
+  
+  .content {
+    // padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    li{
+      a{
+        color:$getDev-text3 !important;
+        font-size: 14.5px;
+        padding-top:5px !important;
+        padding-bottom:5px !important;
+        padding-left:30px !important;
+        font-weight: 300;
+        cursor: pointer;
+        @include transition (all 0.35s);
+        &:hover{
+        @include transition (all 0.35s);
+        font-style: italic;
+        color:$getDev-text1;
+        }
+      }
+    }
+  }
   /* header */
   nav{
       position: absolute;
@@ -163,6 +212,7 @@ body {
       .dropdown {
         .dropdown-menu {
           border: none;
+          min-width:12rem;
           @include box-shadow(-3px -3px 14px -1px rgba(0, 0, 0, .02), 3px 3px 14px 1px rgba(0, 0, 0, .02), 2px 4px 18px 3px rgba(0, 0, 0, .015));
           transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
             .dropdown-item {
@@ -181,7 +231,7 @@ body {
 
     .dropdown .dropdown-menu {
       @include transition ( all 0.25s, transform 0.3s);
-      max-height: 200px;
+      max-height: 400px;
       display: block;
       visibility: hidden;
       overflow: hidden;
@@ -190,7 +240,7 @@ body {
   }
   .dropdown:hover>.dropdown-menu {
       visibility: visible;
-      max-height: 200px;
+      max-height: 400px;
       opacity: 1;
       margin-top: 10px;
       transform: translateY(0);

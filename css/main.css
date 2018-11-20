@@ -17,6 +17,48 @@ a {
   a:hover {
     text-decoration: none; }
 
+/*collapsible*/
+.collapsible {
+  padding: 18px;
+  width: 100%; }
+  .collapsible:after {
+    content: '\002B';
+    color: #444444;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px; }
+  .collapsible.active:after {
+    content: "\2212";
+    color: #a21b1f; }
+  .collapsible.active {
+    background: #efefef !important; }
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out; }
+  .content li a {
+    color: #666666 !important;
+    font-size: 14.5px;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    padding-left: 30px !important;
+    font-weight: 300;
+    cursor: pointer;
+    -moz-transition: all 0.35s;
+    -webkit-transition: all 0.35s;
+    -ms-transition: all 0.35s;
+    -o-transition: all 0.35s;
+    transition: all 0.35s; }
+    .content li a:hover {
+      -moz-transition: all 0.35s;
+      -webkit-transition: all 0.35s;
+      -ms-transition: all 0.35s;
+      -o-transition: all 0.35s;
+      transition: all 0.35s;
+      font-style: italic;
+      color: #444444; }
+
 /* header */
 nav {
   position: absolute;
@@ -126,6 +168,7 @@ nav {
       padding: 30px  20px 10px; }
   .header ul .dropdown .dropdown-menu {
     border: none;
+    min-width: 12rem;
     -webkit-box-shadow: -3px -3px 14px -1px rgba(0, 0, 0, 0.02), 3px 3px 14px 1px rgba(0, 0, 0, 0.02), 2px 4px 18px 3px rgba(0, 0, 0, 0.015);
     -o-box-shadow: -3px -3px 14px -1px rgba(0, 0, 0, 0.02), 3px 3px 14px 1px rgba(0, 0, 0, 0.02), 2px 4px 18px 3px rgba(0, 0, 0, 0.015);
     -ms-box-shadow: -3px -3px 14px -1px rgba(0, 0, 0, 0.02), 3px 3px 14px 1px rgba(0, 0, 0, 0.02), 2px 4px 18px 3px rgba(0, 0, 0, 0.015);
@@ -146,7 +189,7 @@ nav {
     -ms-transition: all 0.25s, transform 0.3s;
     -o-transition: all 0.25s, transform 0.3s;
     transition: all 0.25s, transform 0.3s;
-    max-height: 200px;
+    max-height: 400px;
     display: block;
     visibility: hidden;
     overflow: hidden;
@@ -154,7 +197,7 @@ nav {
     transform: translateY(-0.9em); }
   .header .dropdown:hover > .dropdown-menu {
     visibility: visible;
-    max-height: 200px;
+    max-height: 400px;
     opacity: 1;
     margin-top: 10px;
     transform: translateY(0);
